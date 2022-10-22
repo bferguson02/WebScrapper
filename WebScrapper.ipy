@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Oct 22 11:13:12 2022
+
+@author: BFERGU32
+"""
+!pip install beautifulsoup4
+
+from bs4 import BeautifulSoup
+url = input("Enter your URL here")
+page = urlopen(url)
+html = page.read().decode("utf-8")
+soup = BeautifulSoup(html, "html.parser")
+
+print(soup.get_text())
+
+soup.find_all("img")
+
+soup.title
+
+soup.find_all_next
